@@ -27,7 +27,7 @@ bin_size = int(argv[2])
 func = argv[3]
 func_list = ["mean", "median", "sd"]
 if func not in func_list:
-	raise Exception(func +" is not a valid statistic. Use mean, median or sd.")
+	raise ValueError(func +" is not a valid statistic. Use mean, median or sd.")
 
 #set variables
 Bin =1 
