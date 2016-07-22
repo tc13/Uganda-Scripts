@@ -58,7 +58,7 @@ with open (file_in) as pileup:
 		D.append(float(depth))
 		
 		#If the position is equal to the bin_size - prints depth and moves onto next bin		
-		if int(pos) == clock:
+		if int(pos) >= clock:
 			if func == "mean":
 				print chrom, "\t", Bin, "\t", sum(D) /bin_size
 			elif func == "median":
