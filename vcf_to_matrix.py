@@ -1,8 +1,11 @@
 #! /usr/bin/python
+#Script takes a single multi-sample vcf as input and returns numeric SNP matrix
 from sys import argv
 
+#Read in VCF
 file_in = argv[1]
 
+#Function turns vcf SNP calls, ./., 0/0, 0/1, 1,1 etc into numeric values
 def SNPr(snp):
 	s = snp.split("/")
 	if s[0] == ".":
